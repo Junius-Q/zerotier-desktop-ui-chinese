@@ -17,3 +17,4 @@
 # 允许发布 dist 下的汉化版 exe
 !dist/
 !dist/*.exe
+*.obj
