@@ -4,9 +4,26 @@
 
 针对 Windows 平台编译，界面文字已全部汉化（系统托盘菜单、加入网络对话框、关于对话框、系统通知等）。
 
+## 📌 版本说明
+
+**本汉化版的版本号 = 对应的 ZeroTier One 核心版本**，格式与上游保持一致（纯版本号，不加后缀）。
+
+| 项 | 值 |
+|---|---|
+| 本版版本号 | **1.16.2** |
+| 对应 ZeroTier One | 1.16.2 |
+| 上游源码基线 | [`zerotier/DesktopUI`](https://github.com/zerotier/DesktopUI) `main @ 933e391`（2026-05-27） |
+| 汉化改动范围 | `src/main.rs`、`src/join.rs`、`src/about.rs`（共 3 个文件，**仅字符串翻译，不改逻辑**） |
+
+> **关于上游版本号**：上游仓库的 Releases 页停留在 **`1.8.3`（2021-11-16）**，那是**已废弃的旧发布**，请勿据此判断新旧。
+>
+> 上游后来不再单独给桌面 UI 打 tag —— 该 UI 现在**随 ZeroTier One 安装包一起分发**（本机路径 `C:\Program Files (x86)\ZeroTier\One\zerotier_desktop_ui.exe`）。当前公开 `main` 的代码是 2026-05-22 从 ZeroTier 内部仓库合并出来的 **1.16.2** 版本；`Cargo.toml` 里的 `1.10.0` 是 2022 年定下的内部代号，**不代表发布版本**。
+>
+> 界面上「关于」对话框显示的版本号是**运行时**由 ZeroTier 服务传进来的（`src/main.rs` 读 `args[2]`），与 `Cargo.toml` 无关 —— 官方设计上就是让 UI 跟随服务端版本。
+
 ## 📦 下载
 
-- 编译好的中文版 exe：见 **`dist/zerotier_desktop_ui_zh.exe`**，或前往 [Releases](../../releases) 下载。
+- 编译好的中文版 exe：见 **`dist/zerotier_desktop_ui_zh.exe`**，或前往 [Releases](../../releases) 下载（当前版本 [`1.16.2`](../../releases/tag/1.16.2)）。
 
 ## 🚀 使用方法
 
